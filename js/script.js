@@ -66,7 +66,7 @@ const htmlQuote=document.querySelector('.quote');
   //const htmlYear= document.querySelector('.year');
  // console.log(`The quote: ${ranQuote.quote}  and the ${ranQuote.author}`)
   htmlQuote.innerHTML=ranQuote.quote;
-  htmlAuthor.innerHTML=` ${ranQuote.source}  ${ ranQuote.citation? `, <em>${ranQuote.citation} </em>`: ""}  ${ranQuote.year? ranQuote.year:""}`;
+  htmlAuthor.innerHTML=`${ranQuote.source}${ ranQuote.citation? `<span class="citation">${ranQuote.citation} </span>`: ""}${ranQuote.year? `<span class="year">${ranQuote.year}</span>`:""}`;
   //htmlAuthor.innerHTML= ranQuote.source;
   //ranQuote.citation ?  htmlCitation.innerHTML = ranQuote.citation : "";
    //ranQuote.year? htmlYear.innerHTML =ranQuote.year : "";
