@@ -44,8 +44,8 @@ year:"1995"},
 
 function getRandomQuote()
 {
-  let ranNum=Math.floor(Math.random()* quotes.length);
-  return quotes[ranNum];
+  let ranNum=Math.floor(Math.random()* quotes.length); //gets random number from 0 to last index of the array
+  return quotes[ranNum];//return the random quote object
 }
 
 
@@ -56,20 +56,16 @@ function getRandomQuote()
 ***/
 function printQuote(){
 
-  let ranQuote=getRandomQuote();
-  console.log(ranQuote);
+  let ranQuote=getRandomQuote();  //Holds the random quote object
+ 
 
-const htmlQuote=document.querySelector('.quote');
- //console.log(htmlQuote);
-  const htmlAuthor=document.querySelector('.source');
-  //const htmlCitation=document.querySelector('.citation');
-  //const htmlYear= document.querySelector('.year');
- // console.log(`The quote: ${ranQuote.quote}  and the ${ranQuote.author}`)
-  htmlQuote.innerHTML=ranQuote.quote;
-  htmlAuthor.innerHTML=`${ranQuote.source}${ ranQuote.citation? `<span class="citation">${ranQuote.citation} </span>`: ""}${ranQuote.year? `<span class="year">${ranQuote.year}</span>`:""}`;
-  //htmlAuthor.innerHTML= ranQuote.source;
-  //ranQuote.citation ?  htmlCitation.innerHTML = ranQuote.citation : "";
-   //ranQuote.year? htmlYear.innerHTML =ranQuote.year : "";
+const htmlQuote=document.querySelector('.quote'); //select html class for the quote
+ 
+  const htmlAuthor=document.querySelector('.source'); //select the html class for autho
+ 
+  htmlQuote.innerHTML=ranQuote.quote;  //update the innerhtml of the quote class
+  htmlAuthor.innerHTML=`${ranQuote.source}${ ranQuote.citation? `<span class="citation">${ranQuote.citation} </span>`: ""}${ranQuote.year? `<span class="year">${ranQuote.year}</span>`:""}`; //add the quote, citation and author to the html 
+
 }
 
 
